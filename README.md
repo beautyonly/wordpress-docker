@@ -2,9 +2,9 @@
 
 Dockerfile，安装最新的wordpress，nginx，php-apc和php-fpm。
 
-注意：非常感谢[jbfink]（https://github.com/jbfink/docker-wordpress）谁在wordpress部分做了大部分努力！
+注意：非常感谢[beautyonly]（https://github.com/beautyonly/wordpress-docker.git）谁在wordpress部分做了大部分努力！
 
-你可以查看他的[Apache版本]（https://github.com/jbfink/docker-wordpress）。
+你可以查看他的[Apache版本]（https://github.com/beautyonly/wordpress-docker.git）。
 
 ##安装
 
@@ -12,15 +12,15 @@ Dockerfile，安装最新的wordpress，nginx，php-apc和php-fpm。
 来自Docker注册表：
 
 ```bash
-$ docker pull eugeneware / docker-wordpress-nginx
+$ docker pull eugeneware / wordpress-docker
 ```
 
 如果你想自己构建图像，那么：
 
 ```bash
-$ git clone https://github.com/eugeneware/docker-wordpress-nginx.git
+$ git clone https://github.com/beautyonly/wordpress-docker.git 
 $ cd docker-wordpress-nginx
-$ sudo docker build -t =“eugeneware / docker-wordpress-nginx”。
+$ sudo docker build -t =“eugeneware / wordpress-docker”。
 ```
 
 ##用法
@@ -28,13 +28,13 @@ $ sudo docker build -t =“eugeneware / docker-wordpress-nginx”。
 在端口80上产生一个新的wordpress实例。-p 80:80将内部码头端口80映射到主机的外部端口80。
 
 ```bash
-$ sudo docker run -p 80:80 --name docker-wordpress-nginx -d eugeneware / docker-wordpress-nginx
+$ sudo docker run -p 80:80 --name docker-wordpress-nginx -d eugeneware / wordpress-docker
 ```
 
 开始你新创建的码头。
 
 ```
-$ sudo docker start docker-wordpress-nginx
+$ sudo docker start wordpress-docker
 ```
 
 启动docker-wordpress-nginx检查后，看看它是否启动，端口映射是否正确。这也将报告码头集装箱和主机之间的端口映射。
@@ -42,7 +42,7 @@ $ sudo docker start docker-wordpress-nginx
 ```
 $ sudo docker ps
 
-0.0.0.0:80 - > 80 / tcp docker-wordpress-nginx
+0.0.0.0:80 - > 80 / tcp wordpress-docker
 ```
 
 您可以在主机上的浏览器中访问以下URL以开始使用：
